@@ -24,3 +24,19 @@ test-driver
 *.zip
 /*.cpp
 /*.hpp
+
+# Build directories
+build/
+bin/
+*build*/
+out/
+
+# CMake cache
+CMakeCache.txt
+CMakeLists.txt.user*
+
+# Visual Studio
+.vs/
+
+# idea
+.idea/

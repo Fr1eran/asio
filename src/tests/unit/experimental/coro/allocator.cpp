@@ -21,7 +21,7 @@
 #include "asio/io_context.hpp"
 #include "../../unit_test.hpp"
 
-namespace exp =  asio::experimental;
+namespace asio_exp = asio::experimental;
 
 namespace coro {
 
@@ -58,7 +58,7 @@ struct tracked_allocator
   }
 };
 
-exp::coro<void, void, asio::any_io_executor, tracked_allocator<void>>
+asio_exp::coro<void, void, asio::any_io_executor, tracked_allocator<void>>
         alloc_test_impl(asio::io_context& ctx, int, std::allocator_arg_t, tracked_allocator<void> ta, double)
 {
   co_return ;
